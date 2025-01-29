@@ -36,3 +36,33 @@ IAM role or user with permissions to manage VPC, EC2, RDS, and ALB
 Network Configuration:
 
 CIDR ranges for subnets
+
+
+
+Steps to Execute
+
+Clone the Repository:
+
+ git clone <repository-url> cd <repository-directory>
+ 
+Initialize Terraform:
+
+ terraform init
+ 
+Validate the Configuration:
+
+ terraform validate
+ 
+Plan the Deployment:
+
+ terraform plan
+ 
+Apply the Configuration:
+
+ terraform apply
+ 
+Confirm the prompt by typing yes.
+
+Verify Resources in AWS Console: Check the VPC, subnets, NAT gateways, ALB, EC2 instances, and RDS database in the AWS Management Console.
+
+Access the Application: Use the DNS name of the Application Load Balancer to verify the deployment.
