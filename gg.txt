@@ -1,0 +1,29 @@
+Create vpc with cidr 10.0.0.0/16
+
+webtier -- create 2 public subnet. one in us-east-1a, one in us-east-1b
+apptier -- create 2 private subnet. one in us-east-1a, one in us-east-1b
+database tier --create 2 private subnet. one in us-east-1a, one in us-east-1b
+
+create internet gateway and attach it to vpc
+create application load balancer
+
+create nat gateway in each publicsubnet and attach elastic ip
+
+create auto scaling group with launch template for instance
+
+
+create route table, subnet association, routes.
+
+
+traffic comes to internetgateway --> application load balancer --> auto scalinggroup --> publicsubnet
+
+create application load balancer and auto scaling group with lauch template again for privatesubnet apptier.
+
+traffic for private subnet instance should get traffic only from nat gateway.
+
+
+databasetier: create rds mysql db with multi az enabled.
+db receives trafficonly from apptier instance
+
+
+
